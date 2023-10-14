@@ -22,18 +22,23 @@ const ExampleToast = ({ children }) => {
   );
 };
 
-const App = () => (
+const App = () => {
+  const url = new URL(window.location.href);
+  const ipAddress = url.hostname;
+
+  return (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
       <h1 className="header">Welcome To React-Bootstrap</h1>
       <ExampleToast>
         We now have Toasts
         <span role="img" aria-label="tada">
-          🎉
+          🎉 from {ipAddress}
         </span>
       </ExampleToast>
     </Container>
   </Container>
-);
+  )
+};
 
 export default App;
