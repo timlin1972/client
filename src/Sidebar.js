@@ -31,6 +31,9 @@ const Sidebar = ({url}) => {
             <NavLink exact to="/about" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns">About</CDBSidebarMenuItem>
             </NavLink>
+            <NavLink exact to="/logout" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="columns">Logout</CDBSidebarMenuItem>
+            </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 

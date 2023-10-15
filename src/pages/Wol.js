@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Wol = ({url}) => {
   function handleClick() {
-    const url_get = `${url.href}plugin/wol/nas`;
+    const url_get = `${url.origin}/plugin/wol/nas`;
     axios.get(url_get)
       .then(function (response) {
         console.log(response);
@@ -16,7 +16,7 @@ const Wol = ({url}) => {
 
   return (
     <>
-    Wol<br/>
+      Wol<br/>
       <Button variant="primary" onClick={handleClick}>LinDS</Button>
     </>
   );
