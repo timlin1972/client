@@ -12,6 +12,7 @@ import SysStat from './pages/SysStat';
 import Wol from './pages/Wol';
 import About from './pages/About';
 import Logout from './pages/Logout';
+import Shutdown from './pages/Shutdown';
 
 function Home() {
     const url = new URL(window.location.href);
@@ -33,6 +34,7 @@ function Home() {
                                 <Route path='/login' element={<Login url={url}/>} />
                                 <Route path='/sysstat' element={<SysStat url={url}/>} />
                                 <Route path='/wol' element={<Wol url={url}/>} />
+                                <Route path='/shutdown' element={<Shutdown url={url}/>} />
                                 <Route path='/about' element={<About url={url}/>} />
                                 <Route path='/logout' element={<Logout url={url}/>} />
                                 <Route path='*' element={<SysStat url={url}/>} />

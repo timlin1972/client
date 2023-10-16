@@ -28,6 +28,9 @@ const Sidebar = ({url}) => {
             <NavLink exact to="/wol" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="hammer">Wake on LAN</CDBSidebarMenuItem>
             </NavLink>
+            <NavLink exact to="/shutdown" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="hammer">Shutdown</CDBSidebarMenuItem>
+            </NavLink>
             <NavLink exact to="/about" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns">About</CDBSidebarMenuItem>
             </NavLink>
