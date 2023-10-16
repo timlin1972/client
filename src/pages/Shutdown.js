@@ -9,15 +9,15 @@ const Shutdown = ({url}) => {
       .then(function (response) {
         console.log(response);
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch(function (err) {
+        console.log(err);
       });
   }
 
   return (
     <>
-      Shutdown<br/>
-      <Button variant="primary" onClick={handleClick}>Server</Button>
+      <h1>Shutdown</h1>
+      <Button variant="dark" onClick={handleClick}>Server</Button>
     </>
   );
 };

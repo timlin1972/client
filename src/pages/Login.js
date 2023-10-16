@@ -68,9 +68,11 @@ const Login = ({url}) => {
                             <Button variant="dark" type="submit">
                                 Login
                             </Button>
-                            {alert && <Alert variant="danger" onClose={() => setAlert(false)} dismissible>
-                                {alertMessage}
-                            </Alert>
+                            {
+                                alert && 
+                                <Alert variant="danger" onClose={() => setAlert(false)} dismissible>
+                                    {alertMessage}
+                                </Alert>
                             }
                         </Form>
                     </div>

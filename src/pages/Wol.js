@@ -9,15 +9,15 @@ const Wol = ({url}) => {
       .then(function (response) {
         console.log(response);
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch(function (err) {
+        console.log(err);
       });
   }
 
   return (
     <>
-      Wol<br/>
-      <Button variant="primary" onClick={handleClick}>LinDS</Button>
+      <h1>Wake on LAN</h1>
+      <Button variant="dark" onClick={handleClick}>LinDS</Button>
     </>
   );
 };

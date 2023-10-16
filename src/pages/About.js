@@ -3,8 +3,8 @@ import React from 'react';
 const About = ({url}) => {
   return (
     <>
-    About<br/>
-        IP address: {url.host}
+      <h1>About</h1>
+      <p>IP address: {url.host}</p>
     </>
   );
 };
