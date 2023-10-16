@@ -23,11 +23,11 @@ function Home() {
                 <Container fluid>
                     <Row>
                         {token &&
-                        <Col>
+                        <Col md={3}>
                             <Sidebar url={url}/>
                         </Col>
                         }
-                        <Col>
+                        <Col md={9}>
                             <Routes>
                                 <Route path='/' element={<SysStat url={url}/>} />
                                 <Route path='/login' element={<Login url={url}/>} />
