@@ -10,8 +10,24 @@ const Wol = ({url}) => {
   const [alertMessage, setAlertMessage] = useState();
   const [wol, setWol] = useState();
 
-  function handleClick() {
+  function handleWol() {
     const url_post = `${url.origin}/plugin/wol`;
+    axios.post(url_post, {
+      "device": "nas"
+    })
+      .then(function (response) {
+        setAlertMessage(response.data);
+        timerRef.current = setTimeout(() => {
+          setAlertMessage();
+        }, 3000);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+
+  function handlePing() {
+    const url_post = `${url.origin}/plugin/wol/ping`;
     axios.post(url_post, {
       "device": "nas"
     })
@@ -68,7 +84,8 @@ const Wol = ({url}) => {
         </>
       }
 
-      <Button variant="dark" onClick={handleClick}>LinDS</Button>
+      <Button variant="dark" onClick={handleWol}>Wol: nas</Button>
+      <Button variant="dark" onClick={handlePing}>Ping: nas</Button>
     </>
   );
 };
