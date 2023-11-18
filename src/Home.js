@@ -12,6 +12,7 @@ import About from './pages/About';
 import Logout from './pages/Logout';
 import Shutdown from './pages/Shutdown';
 import Screen from './pages/Screen';
+import Log from './pages/Log';
 
 function Home() {
     const url = new URL(window.location.href);
@@ -26,6 +27,7 @@ function Home() {
             <Route path='/wol' element={<Wol url={url}/>} />
             <Route path='/shutdown' element={<Shutdown url={url}/>} />
             <Route path='/screen' element={<Screen url={url}/>} />
+            <Route path='/log' element={<Log url={url}/>} />
             <Route path='/about' element={<About url={url}/>} />
             <Route path='/logout' element={<Logout url={url}/>} />
             <Route path='*' element={<SysStat url={url}/>} />
@@ -64,6 +66,11 @@ function Home() {
                             <li class="nav-item">
                                 <NavLink exact to="/screen" activeClassName="activeClicked">
                                     Screen
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink exact to="/log" activeClassName="activeClicked">
+                                    Log
                                 </NavLink>
                             </li>
                             <li class="nav-item">
